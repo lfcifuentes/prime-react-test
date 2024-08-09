@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+import 'primeicons/primeicons.css';
 import './sass/index.css';
+
+import { PrimeReactProvider } from "primereact/api";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -21,7 +26,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <PrimeReactProvider>
+      <RouterProvider router={router} />
+    </PrimeReactProvider>
   </React.StrictMode>
 );
 
